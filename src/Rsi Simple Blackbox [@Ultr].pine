@@ -1,0 +1,25 @@
+//@version=5
+indicator("RSI with Double Overbought/Oversold Lines", shorttitle="RSI DO", overlay=false)
+
+// Define los parámetros del RSI
+rsiLength = input(14, title="Longitud RSI")
+overBought = input(70, title="Nivel de sobrecompra")
+overSold = input(30, title="Nivel de sobreventa")
+
+// Calcula el RSI
+rsi = ta.rsi(close, rsiLength)
+
+// Define las líneas de sobrecompra y sobreventa
+overBoughtLine1 = hline(overBought, "Sobrecompra 1", color=color.red)
+overBoughtLine2 = hline(overBought + 5, "Sobrecompra 2", color=color.red)
+overSoldLine1 = hline(overSold, "Sobreventa 1", color=color.green)
+overSoldLine2 = hline(overSold - 5, "Sobreventa 2", color=color.green)
+
+// Define el fondo degradado
+fill(overBoughtLine1, overBoughtLine2, color=color.new(color.red, 90))
+fill(overSoldLine1, overSoldLine2, color=color.new(color.green, 90))
+
+// Grafica el RSI y las líneas
+plot(rsi, title="RSI", color=color.blue)
+hline(overBought, "Sobrecompra", color=color.red)
+hline(overSold, "Sobreventa", color=color.green)

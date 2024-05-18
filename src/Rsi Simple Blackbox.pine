@@ -266,12 +266,13 @@ color colorLightGray				= #787B86					// Gray
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Variables  ═══
+
 var grpValores  = " ═══ Valores ═══ "
 rsiLength       =   input(defval = 14,  title = "Longitud")
 overBoughtHigh  =   input(defval = 75,  title = "Sobrecompra Maximo")
 overBought      =   input(defval = 70,  title = "Sobrecompra")
 overSold        =   input(defval = 30,  title = "Sobreventa")
-overSoldSlow     =   input(defval = 25,  title = "Sobreventa Minimo")
+overSoldSlow    =   input(defval = 25,  title = "Sobreventa Minimo")
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -313,15 +314,17 @@ overBoughtLineHigh  = hline(overBoughtHigh, editable = false, display = display.
 overSoldLine        = hline(overSold,       color = color.new(colorNitRed40, 30))
 overSoldLineSlow    = hline(overSoldSlow,   editable = false, display = display.none)
 
+//  ════════════════
+//  ═══  Simple  ═══
 //  ═══  Linea Rsi  ═══
+
 plot(rsi, title = "RSI", color = color.new(colorLightBlueSky50, 35), linewidth= 2)
 
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Fills  ═══
-//  ═══  Bandas  ═══
 
-//  ═══  Superior & Inferior  Bandas  ═══
+//  ═══  Bandas Superior & Inferior  ═══
 fill(overBoughtLine,    overBoughtLineHigh, color = color.new(colorLightBlueSky50, 70))
 fill(overSoldLine,      overSoldLineSlow,   color = color.new(colorNitRed40, 70))
 

@@ -269,7 +269,6 @@ color colorLightGray				= #787B86					// Gray
 
 var grpValores  = " ═══ Rsi ═══ "
 rsiLength		=	input(defval = 14,  title = "Longitud Rsi")
-maLength		=	input(defval = 20,  title = "Longitud Ma")
 middle			=	input(defval = 50,  title = "Media")
 overBoughtHigh	=	input(defval = 75,  title = "Sobrecompra Maximo")
 overBought		=	input(defval = 70,  title = "Sobrecompra")
@@ -306,12 +305,6 @@ ohl = OHL.new()
 
 //  ════════════════
 //  ═══  Simple  ═══
-//  ═══  Options  ═══
-
-string optionMa	= input.string("SMA", "Tipo de MA",  options = ["EMA", "SMA", "RMA", "WMA", "VWMA"])
-
-//  ════════════════
-//  ═══  Simple  ═══
 //  ═══  Instances  ═══
 
 rsi = ta.rsi(ohl.C, rsiLength)
@@ -319,11 +312,6 @@ rsi = ta.rsi(ohl.C, rsiLength)
 //  ═══  Color CrossOver  ═══
 bool signal         = middle < rsi
 color colorCrOver   = signal ? colorBlueSky30 : colorFucsia40
-// bool crossOv      	= ta.crossover(middle, rsi)
-
-float ma			= ma(ohl.C, maLength,  optionMa)
-float maHeight 		= ta.percentrank(ma, 100)
-float transparencia = math.min(80, 100 - maHeight)
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -342,9 +330,7 @@ gradientSlowLine    = plot(overSold,    editable = false, display = display.none
 //  ═══  Simple  ═══
 //  ═══  Rsi  ═══
 
-rsiPlotLine			= plot(rsi, title = "RSI", color = color.new(colorCrOver, transparencia), linewidth= 2)
-// rsiPlotLine			= plot(rsi, title = "RSI", color = color.new(colorCrOver, 40), linewidth= 2)
-maPlotLine			= plot(ma, title = "Ma", color = color.new(colorCrOver,30), linewidth = 2)
+rsiPlotLine			= plot(rsi, title = "RSI", color = color.new(colorCrOver, 40), linewidth= 2)
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -360,3 +346,17 @@ fill(overBoughtLineHigh,    overSoldLineSlow,       color = color.new(colorBlue5
 //  ═══  Gradient  ═══
 fill(rsiPlotLine, rsiMidline, 100, 60,  top_color = color.new(colorBlueSky30, 0), bottom_color  = color.new(colorBlueSky30, 100), editable = false)
 fill(rsiPlotLine, rsiMidline, 40,  0,   top_color = color.new(colorFucsia40, 100), bottom_color = color.new(colorFucsia40, 0), editable    = false)
+
+//  ════════════════
+//  ═══  Simple  ═══
+//  ═══  Strategy  ═══
+
+zoneAbove = rsi > overBought ? 1 : 0
+zoneBelow = rsi < overSold ? 1 : 0
+crossAbove = rsi[1] <  overSold and rsi > overSold ? 1 : 0
+crossBelow = rsi[1] >  overBought and rsi < overBought ? 1 : 0
+
+bgcolor(zoneAbove ? color.new(colorFucsia40, 70) : na, editable = none)
+bgcolor(zoneBelow ? color.new(colorBlueSky30, 75) : na)
+bgcolor(crossAbove ? color.new(colorBlueSky30, 40) : na)
+bgcolor(crossBelow ? color.new(colorFucsia40, 40) : na)

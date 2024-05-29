@@ -10,258 +10,241 @@ indicator("RSI Bandas Sup & Inf [@Ultr.]", shorttitle="RSI Bandas(@Ultr)", overl
 //  ═══  Simple  ═══
 //  ═══  Colors  ═══
 
-//  ═══  Standard  ═══
-	// color colorAqua				= color.aqua			// #00BCD4  Aqua
-	// color colorBlueSky10			= input.color(#59F2E9)  //
-	// color colorBlueSky20			= input.color(#39F0EA)  //
-	// color colorBlueSky30			= input.color(#01EBF9)  // EEG Light Blue
-	// color colorBlueSky40			= input.color(#00E7FD)  // EEG Light Blue
-	// color colorLightBlueSky50	= input.color(#12cef8)  // Celeste
-	// color colorMenta10			= input.color(#E0F9EF)
-	// color colorMenta20			= input.color(#80F3EC)  //
-	// color colorMenta30			= input.color(#7FFFD4)  //
-	// color colorMenta40			= input.color(#73FFCA)  //
-	// color colorLightMenta50		= input.color(#00ffd5)  // Menta
-	// color colorBlue  			= color.blue			// #2196F3  Blue
-	// color colorBlue50			= input.color(#0034c5)
-	// color colorTeal				= color.teal			// #00897B  Teal
-	// color colorGreen				= color.green			// #4CAF50  Green
-	// color colorOlive				= color.olive			// #808000  Olive
-	// color colorLime				= color.lime			// #00E676  Lime
-	// color colorLightGreen50		= input.color(#33ffac)
-	// color colorYellow			= color.yellow			// #FFEB3B  Yellow
-	// color colorLightYellow50		= input.color(#eedd45)
-	// color colorOrange			= color.orange			// #FF9800  Orange
-	// color colorMaroon			= color.maroon			// #880E4F  Maroon
-	// color colorRed				= color.red				// #FF5252  Red
-	// color colorNitRed40			= input.color(#e91e63)
-	// color colorNitRed50			= input.color(#de0011)
-	// color colorFucsia40			= input.color(#FF00B1)  // EEG Fucsia
-	// color colorFucsia50			= input.color(#FE0CB6)  // EEG Fucsia
-	// color colorFuchsia			= color.fuchsia			// #E040FB  Fuchsia
-	// color colorPurple			= color.purple			// #9C27B0  Purple
-	// color colorNavy				= color.navy			// #311B92  Navy
-	// color colorBlack				= color.black			// #363A45  Black
-	// color colorGray				= color.gray			// #787B86  Gray
-	// color colorSilver			= color.silver			// #B2B5BE  Silver
-	// color colorWhite				= color.white			// #FFFFFF  White
+//  ══  Standard  ══
+	//  color colorAqua							= color.aqua		// #00BCD4		Aqua
+	//  color colorBlue							= color.blue		// #2196F3		Blue
+	//  color colorTeal							= color.teal		// #00897B		Teal
+	//  color colorGreen						= color.green		// #4CAF50		Green
+	//  color colorOlive						= color.olive		// #808000		Olive
+	//  color colorLime							= color.lime		// #00E676		Lime
+	//  color colorYellow						= color.yellow		// #FFEB3B		Yellow
+	//  color colorOrange						= color.orange		// #FF9800		Orange
+	//  color colorMaroon						= color.maroon		// #880E4F		Maroon
+	//  color colorRed							= color.red			// #FF5252		Red
+	//  color colorFuchsia						= color.fuchsia		// #E040FB		Fuchsia
+	//  color colorPurple						= color.purple		// #9C27B0		Purple
+	//  color colorNavy							= color.navy		// #311B92		Navy
+	//  color colorBlack						= color.black		// #363A45		Black
+	//  color colorGray							= color.gray		// #787B86		Gray
+	//  color colorSilver						= color.silver		// #B2B5BE		Silver
+	//  color colorWhite						= color.white		// #FFFFFF		White
 
-//  ═══  Ameritrade  ═══
-	//  colorWhite					= input.color(#FFFFFF)
-	//  colorGrayPlatinum			= input.color(#F7F7F7)
-	//  colorGrayNickel				= input.color(#F1F1F1)
-	//  colorGrayNickelDark20		= input.color(#C0C0C0)
-	//  colorGrayAluminum			= input.color(#E6E7E9)
-	//  colorGrayAsh				= input.color(#D8D8D8)
-	//  colorGrayStone				= input.color(#999999)
-	//  colorGrayIron				= input.color(#666666)
-	//  colorGrayCharcoal			= input.color(#333333)
-	//  colorBlack					= input.color(#000000)
-	//  colorGreenCabbage			= input.color(#EBF6E9)
-	//  colorGreenVerdeLight70		= input.color(#B4D6B2)
-	//  colorGreenVerdeLight50		= input.color(#83BC7F)
-	//  colorGreenVerdeNat			= input.color(#40a829)
-	//  colorGreenVerdeLight20		= input.color(#399333)
-	//  colorGreenVerde				= input.color(#087900)
-	//  colorGreenVerdeDark20		= input.color(#066000)
-	//  colorGreenMoss				= input.color(#BEE7D3)
-	//  colorGreenMint				= input.color(#6DC4BC)
-	//  colorGreenPine				= input.color(#38635A)
-	//  colorRedRose				= input.color(#FAD1CF)
-	//  colorRedRojaLight50			= input.color(#E08988)
-	//  colorRedRojaLight20			= input.color(#CD4241)
-	//  colorRedRoja				= input.color(#C11312)
-	//  colorRedRojaDark20			= input.color(#940F0E)
-	//  colororangePeach			= input.color(#FCE7CA)
-	//  colororangeCarrot			= input.color(#ED8902)
-	//  colororangeYam				= input.color(#BD5310)
-	//  colorblueFrost				= input.color(#E1EEF9)
-	//  colorblueLagoon				= input.color(#316486)
-	//  colorblueNavy				= input.color(#2A5673)
-	//  colorblueNcean				= input.color(#64A1C6)
-	//  colorpurpleEggPlant 		= input.color(#732181)
+//  ══  Ameritrade  ══
+    //  color colorAmeritradeWhite				= #FFFFFF			// AmeritradeWhite
+    //  color colorAmeritradeGrayPlatinum		= #F7F7F7			// AmeritradeGrayPlatinum
+color colorAmeritradeGrayNickel			        = #F1F1F1			// AmeritradeGrayNickel
+    //  color colorAmeritradeGrayNickelDark20	= #C0C0C0			// AmeritradeGrayNickelDark20
+color colorAmeritradeGrayAluminum		        = #E6E7E9			// AmeritradeGrayAluminum
+color colorAmeritradeGrayAsh			        = #D8D8D8			// AmeritradeGrayAsh
+    //  color colorAmeritradeGrayStone			= #999999			// AmeritradeGrayStone
+    //  color colorAmeritradeGrayIron			= #666666			// AmeritradeGrayIron
+    //  color colorAmeritradeGrayCharcoal		= #333333			// AmeritradeGrayCharcoal
+    //  color colorAmeritradeBlack				= #000000			// AmeritradeBlack
+    //  color colorAmeritradeGreenCabbage		= #EBF6E9			// AmeritradeGreenCabbage
+    //  color colorAmeritradeGreenVerdeLight70	= #B4D6B2			// AmeritradeGreenVerdeLight70
+    //  color colorAmeritradeGreenVerdeLight50	= #83BC7F			// AmeritradeGreenVerdeLight50
+    //  color colorAmeritradeGreenVerdeNat		= #40a829			// AmeritradeGreenVerdeNat
+    //  color colorAmeritradeGreenVerdeLight20	= #399333			// AmeritradeGreenVerdeLight20
+    //  color colorAmeritradeGreenVerde			= #087900			// AmeritradeGreenVerde
+    //  color colorAmeritradeGreenVerdeDark20	= #066000			// AmeritradeGreenVerdeDark20
+color colorAmeritradeGreenMoss			        = #BEE7D3			// AmeritradeGreenMoss
+    //  color colorAmeritradeGreenMint			= #6DC4BC			// AmeritradeGreenMint
+    //  color colorAmeritradeGreenPine			= #38635A			// AmeritradeGreenPine
+    //  color colorAmeritradeRedRose			= #FAD1CF			// AmeritradeRedRose
+    //  color colorAmeritradeRedRojaLight50		= #E08988			// AmeritradeRedRojaLight50
+    //  color colorAmeritradeRedRojaLight20		= #CD4241			// AmeritradeRedRojaLight20
+    //  color colorAmeritradeRedRoja			= #C11312			// AmeritradeRedRoja
+    //  color colorAmeritradeRedRojaDark20		= #940F0E			// AmeritradeRedRojaDark20
+    //  color colorAmeritradeorangePeach		= #FCE7CA			// AmeritradeorangePeach
+    //  color colorAmeritradeorangeCarrot		= #ED8902			// AmeritradeorangeCarrot
+    //  color colorAmeritradeorangeYam			= #BD5310			// AmeritradeorangeYam
+    //  color colorAmeritradeblueFrost			= #E1EEF9			// AmeritradeblueFrost
+color colorAmeritradeblueLagoon			        = #316486			// AmeritradeblueLagoon
+    //  color colorAmeritradeblueNavy			= #2A5673			// AmeritradeblueNavy
+    //  color colorAmeritradeblueNcean			= #64A1C6			// AmeritradeblueNcean
+    //  color colorAmeritradepurpleEggPlant		= #732181			// AmeritradepurpleEggPlant
 
-//  ═══  Axi  ═══
-	//  colorGlobalPrimary			= input.color(#fc404d)
-	//  colorGlobalSecondary		= input.color(#282424)
-	//  colorGlobalAccent			= input.color(#61ce70)
-	//  colorGlobal-7a46f22			= input.color(#d11c36)
-	//  colorGlobal-1519066c		= input.color(#fc404d)
-	//  colorGlobal-3d4fa1a1		= input.color(#f0ebe3)
-	//  colorGlobal-638b46c1		= input.color(#fcd758)
-	//  colorGlobal-d07bac9			= input.color(#f9b4a8)
-	//  colorGlobal-e63a114			= input.color(#2c4d5a)
-	//  colorGlobal-8bf0845			= input.color(#a4d866)
-	//  colorGlobal-75c6da1			= input.color(#282424)
-	//  colorGlobal-378280f			= input.color(#45c2c7)
-	//  colorGlobal-4de92c5			= input.color(#6caddf)
-	//  colorGlobal-413dab8			= input.color(#00275d)
-	//  colorGlobal-b3fab89			= input.color(#55165c)
-	//  colorGlobal-548138f			= input.color(#45c2c7)
-	//  colorGlobal-5ed9920			= input.color(#ea1616)
-	//  colorGlobal-70f7335			= input.color(#dd0606)
+//  ══  Axi  ══
+color colorAxiPrimary					        = #fc404d			// AxiPrimary
+color colorAxiSecondary					        = #282424			// AxiSecondary
+color colorAxiAccent					        = #61ce70			// AxiAccent
+color colorAxi7a46f22					        = #d11c36			// Axi7a46f22
+color colorAxi1519066c					        = #fc404d			// Axi1519066c
+color colorAxi3d4fa1a1					        = #f0ebe3			// Axi3d4fa1a1
+    //  color colorAxi638b46c1					= #fcd758			// Axi638b46c1
+    //  color colorAxid07bac9					= #f9b4a8			// Axid07bac9
+color colorAxie63a114					        = #2c4d5a			// Axie63a114
+    //  color colorAxi8bf0845					= #a4d866			// Axi8bf0845
+    //  color colorAxi75c6da1					= #282424			// Axi75c6da1
+    //  color colorAxi378280f					= #45c2c7			// Axi378280f
+color colorAxi4de92c5					        = #6caddf			// Axi4de92c5
+color colorAxi413dab8					        = #00275d			// Axi413dab8
+color colorAxib3fab89					        = #55165c			// Axib3fab89
+color colorAxi548138f					        = #45c2c7			// Axi548138f
+color colorAxi5ed9920					        = #ea1616			// Axi5ed9920
+color colorAxi70f7335					        = #dd0606			// Axi70f7335
 
-//  ═══  GrayScale  ═══
-	//  colorFocus					= input.color(#2d7aed)
-	//  colorWhite					= input.color(#fff)
-	//  colorBlack					= input.color(#000)
-	//  colorPrimaryBlackberry		= input.color(#2e234b)
-	//  colorPrimaryBlackberry40	= input.color(rgba(46, 35, 75, .4))
-	//  colorPrimaryBlackberry65	= input.color(rgba(46, 35, 75, .65))
-	//  colorPrimaryCoral			= input.color(#ffb198)
-	//  colorSecondaryForestGreen	= input.color(#244024)
-	//  colorSecondaryKeyLime		= input.color(#b5ce6f)
-	//  colorSecondaryLavender		= input.color(#c5bfe4)
-	//  colorSecondaryLavender40	= input.color(rgba(197, 191, 228, .4))
-	//  colorsecondaryLavender60	= input.color(rgba(197, 191, 228, .6))
-	//  colorhoverWhite				= input.color(#c0bdc9)
-	//  colorhoverBlackberry		= input.color(#42326b)
-	//  colordisabledBlackberry		= input.color(#4d4466)
-	//  coloractiveBlackberry		= input.color(#4d4466)
-	//  colorhoverCcoral			= input.color(#ffcdbd)
-	//  coloractiveCcoral			= input.color(#ff9e80)
-	//  colorhoverGray				= input.color(#827b93)
-	//  colorhoverGray2				= input.color(#6d6581)
-	//  colorgrayCharcoal			= input.color(#282525)
-	//  colorgrayCharcoal70			= input.color(rgba(40, 37, 37, .7))
-	//  colorgrayCharcoal80			= input.color(rgba(40, 37, 37, .8))
-	//  colorgrayLight				= input.color(#f5f5f5)
-	//  colorgrayMedium				= input.color(#eee)
-	//  colorgray70					= input.color(#696666)
-	//  colorgrayDark				= input.color(#c1c1c1)
-	//  colorwebSeasalt				= input.color(#fafafc)
-	//  colorwebDivider				= input.color(#e9e7f1)
-	//  colorwebBackground			= input.color(#f3f2fa)
-	//  colorwebSecondaryText		= input.color(#77708a)
-	//  colorwebStroke				= input.color(#d3ceeb)
-	//  colorwebErrors				= input.color(#e00000)
-	//  colorwebService				= input.color(#2d7aed)
+//  ══  GrayScale  ══
+    //  color colorGrayScaleFocus				= #2d7aed			// GrayScaleFocus
+    //  color colorGrayScaleWhite				= #fff				// GrayScaleWhite
+    //  color colorGrayScaleBlack				= #000				// GrayScaleBlack
+color colorGrayScalePrimaryBlackberry	        = #2e234b			// GrayScalePrimaryBlackberry
+    //  color colorGrayScalePrimaryBlackberry40	= rgba(46, 35, 75, .4))				// GrayScalePrimaryBlackberry40
+    //  color colorGrayScalePrimaryBlackberry65	= rgba(46, 35, 75, .65))			// GrayScalePrimaryBlackberry65
+    //  color colorGrayScalePrimaryCoral		= #ffb198			// GrayScalePrimaryCoral
+color colorGrayScaleSecondaryForestGreen	    = #244024          // GrayScaleSecondaryForestGreen
+    //  color colorGrayScaleSecondaryKeyLime	= #b5ce6f			// GrayScaleSecondaryKeyLime
+color colorGrayScaleSecondaryLavender	        = #c5bfe4			// GrayScaleSecondaryLavender
+    //  color colorGrayScaleSecondaryLavender40	= rgba(197, 191, 228, .4))			// GrayScaleSecondaryLavender40
+    //  color colorGrayScalesecondaryLavender60	= rgba(197, 191, 228, .6))			// GrayScalesecondaryLavender60
+    //  color colorGrayScalehoverWhite			= #c0bdc9			// GrayScalehoverWhite
+    //  color colorGrayScalehoverBlackberry		= #42326b			// GrayScalehoverBlackberry
+    //  color colorGrayScaledisabledBlackberry	= #4d4466			// GrayScaledisabledBlackberry
+    //  color colorGrayScaleactiveBlackberry	= #4d4466			// GrayScaleactiveBlackberry
+    //  color colorGrayScalehoverCcoral			= #ffcdbd			// GrayScalehoverCcoral
+    //  color colorGrayScaleactiveCcoral		= #ff9e80			// GrayScaleactiveCcoral
+    //  color colorGrayScalehoverGray			= #827b93			// GrayScalehoverGray
+    //  color colorGrayScalehoverGray2			= #6d6581			// GrayScalehoverGray2
+    //  color colorGrayScalegrayCharcoal		= #282525			// GrayScalegrayCharcoal
+    //  color colorGrayScalegrayCharcoal70		= rgba(40, 37, 37, .7))				// GrayScalegrayCharcoal70
+    //  color colorGrayScalegrayCharcoal80		= rgba(40, 37, 37, .8))				// GrayScalegrayCharcoal80
+    //  color colorGrayScalegrayLight			= #f5f5f5			// GrayScalegrayLight
+    //  color colorGrayScalegrayMedium			= #eee				// GrayScalegrayMedium
+    //  color colorGrayScalegray70				= #696666			// GrayScalegray70
+    //  color colorGrayScalegrayDark			= #c1c1c1			// GrayScalegrayDark
+color colorGrayScalewebSeasalt			        = #fafafc			// GrayScalewebSeasalt
+color colorGrayScalewebDivider			        = #e9e7f1			// GrayScalewebDivider
+color colorGrayScalewebBackground		        = #f3f2fa			// GrayScalewebBackground
+    //  color colorGrayScalewebSecondaryText	= #77708a			// GrayScalewebSecondaryText
+    //  color colorGrayScalewebStroke			= #d3ceeb			// GrayScalewebStroke
+    //  color colorGrayScalewebErrors			= #e00000			// GrayScalewebErrors
+    //  color colorGrayScalewebService			= #2d7aed			// GrayScalewebService
 
-//  ═══  Interactive  ═══
-	//  coloPrimary3		= input.color(hsla(355, 85%, 46%, 0.03))
-	//  coloPrimary5		= input.color(hsla(355, 85%, 46%, 0.05))
-	//  coloPrimary10		= input.color(hsla(355, 85%, 46%, 0.10))
-	//  coloPrimary20		= input.color(hsla(355, 85%, 46%, 0.20))
-	//  coloPrimary30		= input.color(hsla(355, 85%, 46%, 0.30))
-	//  coloPrimary40		= input.color(hsla(355, 85%, 46%, 0.40))
-	//  coloPrimary50		= input.color(hsla(355, 85%, 46%, 0.50))
-	//  coloPrimary60		= input.color(hsla(355, 85%, 46%, 0.60))
-	//  coloPrimary70		= input.color(hsla(355, 85%, 46%, 0.70))
-	//  coloPrimary80		= input.color(hsla(355, 85%, 46%, 0.80))
-	//  coloPrimary90		= input.color(hsla(355, 85%, 46%, 0.90))
-	//  coloPrimary			= input.color(hsla(355, 85%, 46%, 1.0))
-	//  coloPrimaryDark10	= input.color(hsla(355, 85%, 41%, 1.0))
-	//  coloPrimaryDark20	= input.color(hsla(355, 85%, 36%, 1.0))
-	//  coloPrimaryDark30	= input.color(hsla(355, 85%, 31%, 1.0))
-	//  coloPrimaryDark40	= input.color(hsla(355, 85%, 26%, 1.0))
-	//  coloPrimaryDark50	= input.color(hsla(355, 85%, 21%, 1.0))
-	//  coloSecondary3		= input.color(hsla(0, 0%, 13%, 0.03))
-	//  coloSecondary5		= input.color(hsla(0, 0%, 13%, 0.05))
-	//  coloSecondary10		= input.color(hsla(0, 0%, 13%, 0.10))
-	//  coloSecondary20		= input.color(hsla(0, 0%, 13%, 0.20))
-	//  coloSecondary30		= input.color(hsla(0, 0%, 13%, 0.30))
-	//  coloSecondary40		= input.color(hsla(0, 0%, 13%, 0.40))
-	//  coloSecondary50		= input.color(hsla(0, 0%, 13%, 0.50))
-	//  coloSecondary60		= input.color(hsla(0, 0%, 13%, 0.60))
-	//  coloSecondary70		= input.color(hsla(0, 0%, 13%, 0.70))
-	//  coloSecondary80		= input.color(hsla(0, 0%, 13%, 0.80))
-	//  coloSecondary90		= input.color(hsla(0, 0%, 13%, 0.90))
-	//  coloSecondary		= input.color(hsla(0, 0%, 13%, 1.0))
-	//  coloSecondaryDark10	= input.color(hsla(0, 0%, 10%, 1.0))
-	//  coloSecondaryDark20	= input.color(hsla(0, 0%, 7%, 1.0))
-	//  coloSecondaryDark30	= input.color(hsla(0, 0%, 4%, 1.0))
-	//  coloSecondaryDark40	= input.color(hsla(0, 0%, 1%, 1.0))
-	//  coloSecondaryDark50	= input.color(hsla(0, 0%, 0%, 1.0))
-	//  coloTertiary3		= input.color(hsla(202, 76%, 19%, 0.03))
-	//  coloTertiary5		= input.color(hsla(202, 76%, 19%, 0.05))
-	//  coloTertiary10		= input.color(hsla(202, 76%, 19%, 0.10))
-	//  coloTertiary20		= input.color(hsla(202, 76%, 19%, 0.20))
-	//  coloTertiary30		= input.color(hsla(202, 76%, 19%, 0.30))
-	//  coloTertiary40		= input.color(hsla(202, 76%, 19%, 0.40))
-	//  coloTertiary50		= input.color(hsla(202, 76%, 19%, 0.50))
-	//  coloTertiary60		= input.color(hsla(202, 76%, 19%, 0.60))
-	//  coloTertiary70		= input.color(hsla(202, 76%, 19%, 0.70))
-	//  coloTertiary80		= input.color(hsla(202, 76%, 19%, 0.80))
-	//  coloTertiary90		= input.color(hsla(202, 76%, 19%, 0.90))
-	//  coloTertiary		= input.color(hsla(202, 76%, 19%, 1.0))
-	//  coloTertiaryDark10 	= input.color(hsla(202, 76%, 14%, 1.0))
-	//  coloTertiaryDark20 	= input.color(hsla(202, 76%, 9%, 1.0))
-	//  coloTertiaryDark30 	= input.color(hsla(202, 76%, 4%, 1.0))
-	//  coloTertiaryDark40 	= input.color(hsla(202, 76%, 0%, 1.0))
+//  ══  Interactive  ══
+	//  color colorInteractivePrimary3				= hsla(355, 85%, 46%, 0.03)			// InteractivePrimary3
+	//  color colorInteractivePrimary5				= hsla(355, 85%, 46%, 0.05)			// InteractivePrimary5
+	//  color colorInteractivePrimary10				= hsla(355, 85%, 46%, 0.10)			// InteractivePrimary10
+	//  color colorInteractivePrimary20				= hsla(355, 85%, 46%, 0.20)			// InteractivePrimary20
+	//  color colorInteractivePrimary30				= hsla(355, 85%, 46%, 0.30)			// InteractivePrimary30
+	//  color colorInteractivePrimary40				= hsla(355, 85%, 46%, 0.40)			// InteractivePrimary40
+	//  color colorInteractivePrimary50				= hsla(355, 85%, 46%, 0.50)			// InteractivePrimary50
+	//  color colorInteractivePrimary60				= hsla(355, 85%, 46%, 0.60)			// InteractivePrimary60
+	//  color colorInteractivePrimary70				= hsla(355, 85%, 46%, 0.70)			// InteractivePrimary70
+	//  color colorInteractivePrimary80				= hsla(355, 85%, 46%, 0.80)			// InteractivePrimary80
+	//  color colorInteractivePrimary90				= hsla(355, 85%, 46%, 0.90)			// InteractivePrimary90
+	//  color colorInteractivePrimary				= hsla(355, 85%, 46%, 1.0)			// InteractivePrimary
+	//  color colorInteractivePrimaryDark10			= hsla(355, 85%, 41%, 1.0)			// InteractivePrimaryDark10
+	//  color colorInteractivePrimaryDark20			= hsla(355, 85%, 36%, 1.0)			// InteractivePrimaryDark20
+	//  color colorInteractivePrimaryDark30			= hsla(355, 85%, 31%, 1.0)			// InteractivePrimaryDark30
+	//  color colorInteractivePrimaryDark40			= hsla(355, 85%, 26%, 1.0)			// InteractivePrimaryDark40
+	//  color colorInteractivePrimaryDark50			= hsla(355, 85%, 21%, 1.0)			// InteractivePrimaryDark50
+	//  color colorInteractiveSecondary3			= hsla(0, 0%, 13%, 0.03)			// InteractiveSecondary3
+	//  color colorInteractiveSecondary5			= hsla(0, 0%, 13%, 0.05)			// InteractiveSecondary5
+	//  color colorInteractiveSecondary10			= hsla(0, 0%, 13%, 0.10)			// InteractiveSecondary10
+	//  color colorInteractiveSecondary20			= hsla(0, 0%, 13%, 0.20)			// InteractiveSecondary20
+	//  color colorInteractiveSecondary30			= hsla(0, 0%, 13%, 0.30)			// InteractiveSecondary30
+	//  color colorInteractiveSecondary40			= hsla(0, 0%, 13%, 0.40)			// InteractiveSecondary40
+	//  color colorInteractiveSecondary50			= hsla(0, 0%, 13%, 0.50)			// InteractiveSecondary50
+	//  color colorInteractiveSecondary60			= hsla(0, 0%, 13%, 0.60)			// InteractiveSecondary60
+	//  color colorInteractiveSecondary70			= hsla(0, 0%, 13%, 0.70)			// InteractiveSecondary70
+	//  color colorInteractiveSecondary80			= hsla(0, 0%, 13%, 0.80)			// InteractiveSecondary80
+	//  color colorInteractiveSecondary90			= hsla(0, 0%, 13%, 0.90)			// InteractiveSecondary90
+	//  color colorInteractiveSecondary				= hsla(0, 0%, 13%, 1.0)				// InteractiveSecondary
+	//  color colorInteractiveSecondaryDark10		= hsla(0, 0%, 10%, 1.0)				// InteractiveSecondaryDark10
+	//  color colorInteractiveSecondaryDark20		= hsla(0, 0%, 7%, 1.0)				// InteractiveSecondaryDark20
+	//  color colorInteractiveSecondaryDark30		= hsla(0, 0%, 4%, 1.0)				// InteractiveSecondaryDark30
+	//  color colorInteractiveSecondaryDark40		= hsla(0, 0%, 1%, 1.0)				// InteractiveSecondaryDark40
+	//  color colorInteractiveSecondaryDark50		= hsla(0, 0%, 0%, 1.0)				// InteractiveSecondaryDark50
+	//  color colorInteractiveTertiary3				= hsla(202, 76%, 19%, 0.03)			// InteractiveTertiary3
+	//  color colorInteractiveTertiary5				= hsla(202, 76%, 19%, 0.05)			// InteractiveTertiary5
+	//  color colorInteractiveTertiary10			= hsla(202, 76%, 19%, 0.10)			// InteractiveTertiary10
+	//  color colorInteractiveTertiary20			= hsla(202, 76%, 19%, 0.20)			// InteractiveTertiary20
+	//  color colorInteractiveTertiary30			= hsla(202, 76%, 19%, 0.30)			// InteractiveTertiary30
+	//  color colorInteractiveTertiary40			= hsla(202, 76%, 19%, 0.40)			// InteractiveTertiary40
+	//  color colorInteractiveTertiary50			= hsla(202, 76%, 19%, 0.50)			// InteractiveTertiary50
+	//  color colorInteractiveTertiary60			= hsla(202, 76%, 19%, 0.60)			// InteractiveTertiary60
+	//  color colorInteractiveTertiary70			= hsla(202, 76%, 19%, 0.70)			// InteractiveTertiary70
+	//  color colorInteractiveTertiary80			= hsla(202, 76%, 19%, 0.80)			// InteractiveTertiary80
+	//  color colorInteractiveTertiary90			= hsla(202, 76%, 19%, 0.90)			// InteractiveTertiary90
+	//  color colorInteractiveTertiary				= hsla(202, 76%, 19%, 1.0)			// InteractiveTertiary
+	//  color colorInteractiveTertiaryDark10		= hsla(202, 76%, 14%, 1.0)			// InteractiveTertiaryDark10
+	//  color colorInteractiveTertiaryDark20		= hsla(202, 76%, 9%, 1.0)			// InteractiveTertiaryDark20
+	//  color colorInteractiveTertiaryDark30		= hsla(202, 76%, 4%, 1.0)			// InteractiveTertiaryDark30
+	//  color colorInteractiveTertiaryDark40		= hsla(202, 76%, 0%, 1.0)			// InteractiveTertiaryDark40
 
-//  ═══  Latam  ═══
-	//  colorRedBackground			= input.color(rgb(232, 17, 75))	//Rojo Latam
+//  ══  Visa  ══
+color colorVisaBrandPrimary				        = #1434CB			// VisaBrandPrimary
+color colorVisaBrandPrimaryLight		        = #3B57DE			// VisaBrandPrimaryLight
+    //  color colorVisaBrandPrimaryDark			= #021E4C			// VisaBrandPrimaryDark
+    //  color colorVisaBrandSecondary			= #FCC015			// VisaBrandSecondary
+    //  color colorVisaBrandSecondaryLight		= #FFD700			// VisaBrandSecondaryLight
+    //  color colorVisaBrandSecondaryDark		= #F7B600			// VisaBrandSecondaryDark
+    //  color colorVisaBrandTertiary7			= #2C2C2C			// VisaBrandTertiary7
+    //  color colorVisaBrandTertiary6			= #5C5C5C			// VisaBrandTertiary6
+    //  color colorVisaBrandTertiary5			= #979797			// VisaBrandTertiary5
+    //  color colorVisaBrandTertiary4			= #B9B9B9			// VisaBrandTertiary4
+color colorVisaBrandTertiary3			        = #DEDEDE			// VisaBrandTertiary3
+    //  color colorVisaBrandTertiary2			= #EEEEEE			// VisaBrandTertiary2
+    //  color colorVisaBrandTertiary1			= #F7F7F7			// VisaBrandTertiary1
 
-//  ═══  Basic  ═══
-    // var grpColor = " ═══ Colores ═══ "
-    // color colorBlueSky10				= input.color(#59F2E9)                   //
-    // color colorBlueSky20				= input.color(#39F0EA)                   //
-    // color colorBlueSky30				= input.color(#01EBF9)                   // EEG Light Blue
-    // color colorBlueSky40				= input.color(#00E7FD)                   // EEG Light Blue
-    // color colorLightBlueSky50		= input.color(#12cef8)                   // Celeste  // // Top Long Buy
-    // color colorMenta10				= input.color(#E0F9EF)
-    // color colorMenta20				= input.color(#80F3EC)                   //
-    // color colorMenta30				= input.color(#7FFFD4)                   //
-    // color colorMenta40				= input.color(#73FFCA)                   //
-    // color colorLightMenta50			= input.color(#00ffd5)                   // Menta
-    // color colorBlue50				= input.color(#0034c5)                   // Blue Light
-    // color colorLightGreen50			= input.color(#33ffac)                   // Green Light
-    // color colorLightYellow50			= input.color(#eedd45)                   // Yellow
-    // color colorNitRed40				= input.color(#e91e63)                   // Red Light  // // Bottom Short Sell
-    // color colorNitRed50				= input.color(#de0011)                   
-    // color colorFucsia40				= input.color(#FF00B1)                   // EEG Fucsia
-    // color colorFucsia50				= input.color(#FE0CB6)                   // EEG Fucsia
+//  ══  Latam  ══
+//  colorLatamRedBackground					= rgb(232, 17, 75)			//  Latam Red Background
 
-    // color colorGrayAluminum			= input.color(#E6E7E9)
-    // color colorGlobalPrimary			= input.color(#fc404d)
-    // color colorGlobal5ed9920			= input.color(#ea1616)
-    // color colorGlobal70f7335			= input.color(#dd0606)
-    // color colorGlobal7a46f22			= input.color(#d11c36)
-    // color colorPrimaryBlackberry		= input.color(#2e234b)
-    // color colorSecondaryForestGreen	= input.color(#244024)
-    // color colorSecondaryLavender		= input.color(#c5bfe4)
-    // color colorWebSeasalt			= input.color(#fafafc)
-    // color colorWebDivider			= input.color(#e9e7f1)
-    // color colorWebBackground			= input.color(#f3f2fa)
-    // color colorRedBackground			= input.color(rgb(232, 17, 75))	 		// Rojo Latam
-    // color colorLilBackground			= input.color(rgb(126, 87, 194, 90))	// Lila
-    // color colorLyla					= input.color(#7E57C2)					// Lila
-    // color colorLightGray				= input.color(#787B86)					// Gray
+//  ══  Arbe Robotics  ══
+color colorArbePrimary					        = #0035FF			// ArbePrimary
+color colorArbePrimaryLight				        = #0640FF			// ArbePrimaryLight
+color colorArbeSecondary				        = #04ebff			// ArbeSecondary
 
+//  ══  AutoX  ══
+    //  color colorAutoXPrimary					= #2253F0			// AutoXPrimary
+    //  color colorAutoXPrimaryLight			= #0050F9			// AutoXPrimaryLight
+color colorAutoXSecondary				        = #75ebc0			// AutoXSecondary
 
-//  ═══  Basic  ═══
-var grpColor = " ═══ Colores ═══ "
-color colorBlueSky10				= #59F2E9                   //
-color colorBlueSky20				= #39F0EA                   //
-color colorBlueSky30				= #01EBF9                   // EEG Light Blue
-color colorBlueSky40				= #00E7FD                   // EEG Light Blue
-color colorLightBlueSky50			= #12cef8                   // Celeste  // // Top Long Buy
-color colorMenta10					= #E0F9EF
-color colorMenta20					= #80F3EC                   //
-color colorMenta30					= #7FFFD4                   //
-color colorMenta40					= #73FFCA                   //
-color colorLightMenta50				= #00ffd5                   // Menta
-color colorBlue50					= #0034c5                   // Blue Light
-color colorLightGreen50				= #33ffac                   // Green Light
-color colorLightYellow50			= #eedd45                   // Yellow
-color colorNitRed40					= #e91e63                   // Red Light  // // Bottom Short Sell
-color colorNitRed50					= #de0011                   
-color colorFucsia40					= #FF00B1                   // EEG Fucsia
-color colorFucsia50					= #FE0CB6                   // EEG Fucsia
-color colorGrayAluminum				= #E6E7E9
-color colorGlobalPrimary			= #fc404d
-color colorGlobal5ed9920			= #ea1616
-color colorGlobal70f7335			= #dd0606
-color colorGlobal7a46f22			= #d11c36
-color colorPrimaryBlackberry		= #2e234b
-color colorSecondaryForestGreen		= #244024
-color colorSecondaryLavender		= #c5bfe4
-color colorWebSeasalt				= #fafafc
-color colorWebDivider				= #e9e7f1
-color colorWebBackground			= #f3f2fa
-color colorLyla						= #7E57C2					// Lila
-color colorLightGray				= #787B86					// Gray
+//  ══  EEG  ══
+color colorEegSkyBlue30					        = #01EBF9			// EEGSkyBlue30
+color colorEegSkyBlue40					        = #00E7FD			// EEGSkyBlue40
+color colorEegFucsia40					        = #FF00B1			// EEGFucsia40
+color colorEegFucsia50					        = #FE0CB6			// EEGFucsia50
 
+//  ══  Bright Line  ══
+color colorBrightYellow10				        = #FBFD73			// BrightLineBackground Yellow Light
+color colorBrightYellow20				        = #FFFD52			// BrightLineBackground Yellow Light
+color colorBrightYellow30				        = #FDF43C			// BrightLineBackground Yellow High
+color colorBrightYellow40				        = #FEF301			// BrightLineBackground Yellow Nit
+color colorBrightYellow50				        = #FFDB00			// BrightLineBackground Yellow Base
+
+//  ══  TradingView  ══
+color colorTvLightMenta50				        = #00ffd5			// TradingViewMenta
+color colorTvLightGreen50				        = #33ffac			// TradingViewGreenNit
+color colorTvBlue50						        = #0034c5			// TradingViewBlue
+color colorTvLightYellow50				        = #eedd45			// TradingViewYellow
+color colorTvNitRed40					        = #e91e63			// TradingViewRedLight
+color colorTvLightBlueSky50				        = #12cef8			// TradingViewBlueSky
+
+//  ══  TFlab  ══
+color colorTFlabAsia					        = #8bbcfc			// Lite TFlabAsia
+color colorTFlabSydney					        = #F0B884			// Lite TFlabSydney
+    //  color colorTFlabTokyo					= #0CC1C0			// Lite TFlabTokyo
+    //  color colorTFlabShanghai				= #FF1010			// Lite TFlabShanghai		#ea1616
+    //  color colorTFlabEuro					= #BBE8B5			// Lite TFlabEuro
+    //  color colorTFlabLondon					= #ACBBE8			// Lite TFlabLondon
+    //  color colorTFlabNewyork					= #C5ACE8			// Lite TFlabNewyork
+    //  color colorTFlabNYSE					= #87c2d4			// Lite TFlabNYSE
+
+//  ══  Ultr  ══
+color colorUltrBlueSky10				        = #59F2E9			// UltrBlueSky10
+color colorUltrBlueSky20				        = #39F0EA			// UltrBlueSky20
+color colorUltrMenta10					        = #E0F9EF			// UltrMenta10
+color colorUtlrMenta20					        = #80F3EC			// UtlrMenta20
+color colorUltrMenta30					        = #7FFFD4			// UltrMenta30
+color colorUltrMenta40					        = #73FFCA			// UltrMenta40
+color colorUltrRose20					        = #ffa3e3			// UltrRose
+color colorUltrFucsia30					        = #ff6fd3			// UltrFucsia
+color colorUltrLyla						        = #7E57C2			// UltrLyla
+color colorUltrLightGray				        = #787B86			// UltrLightGray
+color colorUltrRedNit					        = #de0011			// UltrRedNit
+
+//////////////////////////////////////////////////////////
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -311,20 +294,20 @@ rsi = ta.rsi(ohl.C, rsiLength)
 
 //  ═══  Color CrossOver  ═══
 bool signal         = middle < rsi
-color colorCrOver   = signal ? colorBlueSky30 : colorFucsia40
+color colorCrOver   = signal ? colorTvLightGreen50 : colorAmeritradeGrayNickel
 
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Lines & Plots  ═══
 
-overBoughtLineHigh  = hline(overBoughtHigh, editable = false, display = display.none)
-overBoughtLine      = hline(overBought,     editable = false, display = display.none)
-overSoldLine        = hline(overSold,       editable = false, display = display.none)
-overSoldLineSlow    = hline(overSoldSlow,   editable = false, display = display.none)
+overBoughtLineHigh  = hline(overBoughtHigh, editable = false,		display = display.none)
+overBoughtLine      = hline(overBought,     editable = false,		display = display.none)
+overSoldLine        = hline(overSold,       editable = false,		display = display.none)
+overSoldLineSlow    = hline(overSoldSlow,   editable = false,		display = display.none)
 
-gradientHighLine    = plot(overBought,    editable = false, display = display.none)
-rsiMidline			= plot(middle,			color = color.new(colorWebSeasalt, 70), editable = false)
-gradientSlowLine    = plot(overSold,    editable = false, display = display.none)
+gradientHighLine    = plot(overBought,		editable = false,		display = display.none)
+rsiMidline			= plot(middle,			color	 = color.new(colorAmeritradeGrayNickel, 70), editable = false)
+gradientSlowLine    = plot(overSold,		editable = false,		display = display.none)
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -337,15 +320,15 @@ rsiPlotLine			= plot(rsi, title = "RSI", color = color.new(colorCrOver, 40), lin
 //  ═══  Fills  ═══
 
 //  ═══  Bandas Superior & Inferior  ═══
-fill(overBoughtLine,    overBoughtLineHigh, color = color.new(colorBlueSky30, 85))
-fill(overSoldLine,      overSoldLineSlow,   color = color.new(colorFucsia40, 85))
+fill(overBoughtLine,		overBoughtLineHigh,			color = color.new(colorTvLightGreen50,			88))
+fill(overSoldLine,			overSoldLineSlow,			color = color.new(colorAmeritradeGrayNickel,	88))
 
 //  ═══  Fondo Principal  ═══
-fill(overBoughtLineHigh,    overSoldLineSlow,       color = color.new(colorBlue50, 90))
+fill(overBoughtLineHigh,	overSoldLineSlow,			color = color.new(colorTvLightGreen50,			90))
 
 //  ═══  Gradient  ═══
-fill(rsiPlotLine, rsiMidline, 100, 60,  top_color = color.new(colorBlueSky30, 0), bottom_color  = color.new(colorBlueSky30, 100), editable = false)
-fill(rsiPlotLine, rsiMidline, 40,  0,   top_color = color.new(colorFucsia40, 100), bottom_color = color.new(colorFucsia40, 0), editable    = false)
+fill(rsiPlotLine,		rsiMidline, 100, 60,  top_color = color.new(colorTvLightGreen50, 0),			bottom_color = color.new(colorTvLightGreen50, 100),		editable = false)
+fill(rsiPlotLine,		rsiMidline, 40,  0,   top_color = color.new(colorAmeritradeGrayNickel, 100),	bottom_color = color.new(colorAmeritradeGrayNickel, 0),	editable = false)
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -356,7 +339,7 @@ zoneBelow = rsi < overSold ? 1 : 0
 crossAbove = rsi[1] <  overSold and rsi > overSold ? 1 : 0
 crossBelow = rsi[1] >  overBought and rsi < overBought ? 1 : 0
 
-bgcolor(zoneAbove ? color.new(colorFucsia40, 70) : na, editable = none)
-bgcolor(zoneBelow ? color.new(colorBlueSky30, 75) : na)
-bgcolor(crossAbove ? color.new(colorBlueSky30, 40) : na)
-bgcolor(crossBelow ? color.new(colorFucsia40, 40) : na)
+bgcolor(zoneAbove	? color.new(colorAmeritradeGrayNickel,	85) : na,	editable = false)
+bgcolor(zoneBelow	? color.new(colorTvLightGreen50,		85) : na)
+bgcolor(crossAbove	? color.new(colorTvLightGreen50,		40) : na)
+bgcolor(crossBelow	? color.new(colorAmeritradeGrayNickel,	40) : na)

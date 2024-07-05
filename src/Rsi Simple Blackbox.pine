@@ -350,21 +350,21 @@ color colorCrOver   = signal ? colRsiUp : colRsiDn
 //  ─── Simple ───
 //  ─── Lines & Plots ───
 
-overBoughtLineUp	= hline(overBoughtHigh,	editable = false,		display = display.none)
-overBoughtLine		= hline(overBought,		editable = false,		display = display.none)
-overSoldLine		= hline(overSold,		editable = false,		display = display.none)
-overSoldLineDown	= hline(overSoldSlow,	editable = false,		display = display.none)
+overBoughtLineUp	= hline(viewRsi ? overBoughtHigh	: na,		editable = false,		display = display.none)
+overBoughtLine		= hline(viewRsi ? overBought		: na,		editable = false,		display = display.none)
+overSoldLine		= hline(viewRsi ? overSold			: na,		editable = false,		display = display.none)
+overSoldLineDown	= hline(viewRsi ? overSoldSlow		: na,		editable = false,		display = display.none)
 
-gradientHighLine	= plot(overBought,		editable = false,		display = display.none)
-rsiMidline			= plot(middle,			editable = false,		color	= colRsiMid)
-gradientSlowLine	= plot(overSold,		editable = false,		display = display.none)
+gradientHighLine	= plot(viewRsi ? overBought			: na,		editable = false,		display = display.none)
+rsiMidline			= plot(viewRsi ? middle				: na,		editable = false,		color	= colRsiMid)
+gradientSlowLine	= plot(viewRsi ? overSold			: na,		editable = false,		display = display.none)
 
 //// ─────────────
 
 //  ─── Simple ───
 //  ─── Rsi ───
 
-rsiPlotLine			= plot(rsi,				title = "RSI",			color = color.new(colorCrOver, 40),		linewidth= 2)
+rsiPlotLine			= plot(viewRsi ? rsi : na,					title = "RSI",			color = color.new(colorCrOver, 40),		linewidth= 2)
 
 //// ─────────────
 
@@ -379,8 +379,8 @@ fill(overSoldLine,			overSoldLineDown,			color = colRsiRibbonDn)
 fill(overBoughtLine,		overSoldLine,				color = colRsiGround)
 
 //  ─── Gradient ───
-fill(rsiPlotLine,			rsiMidline, 100, 60,		top_color = colRsiGradUp,			bottom_color = colRsiGradUp100,			editable = false)
-fill(rsiPlotLine,			rsiMidline, 40,  0,			top_color = colRsiGradDn100,		bottom_color = colRsiGradDn,			editable = false)
+fill(rsiPlotLine,			rsiMidline,		100, 60,	top_color = colRsiGradUp,			bottom_color = colRsiGradUp100,			editable = false)
+fill(rsiPlotLine,			rsiMidline,		40,  0,		top_color = colRsiGradDn100,		bottom_color = colRsiGradDn,			editable = false)
 
 //// ─────────────
 
@@ -393,7 +393,7 @@ areaBelow = rsi < overSold ? 1 : 0
 crossAbove = rsi[1] <  overSold and rsi > overSold + 5 ? 1 : 0
 crossBelow = rsi[1] >  overBought and rsi < overBought ? 1 : 0
 
-bgcolor(areaAbove	? colRsiAreaDn		: na)
-bgcolor(areaBelow	? colRsiAreaUp		: na)
-bgcolor(crossAbove	? colRsiCrossHigh	: na)
-bgcolor(crossBelow	? colRsiCrossLow	: na)
+bgcolor(viewBg and areaAbove	? colRsiAreaDn		: na)
+bgcolor(viewBg and areaBelow	? colRsiAreaUp		: na)
+bgcolor(viewBg and crossAbove	? colRsiCrossHigh	: na)
+bgcolor(viewBg and crossBelow	? colRsiCrossLow	: na)

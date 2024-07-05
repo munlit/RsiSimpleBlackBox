@@ -30,39 +30,39 @@ indicator("RSI Bandas Sup & Inf [@Ultr.]", shorttitle="RSI Bandas(@Ultr)", overl
 	//  color colorWhite						= color.white		// #FFFFFF		White
 
 //  ══  Ameritrade  ══
-    //  color colorAmeritradeWhite				= #FFFFFF			// AmeritradeWhite
-    //  color colorAmeritradeGrayPlatinum		= #F7F7F7			// AmeritradeGrayPlatinum
+	//  color colorAmeritradeWhite				= #FFFFFF			// AmeritradeWhite
+	//  color colorAmeritradeGrayPlatinum		= #F7F7F7			// AmeritradeGrayPlatinum
 color colorAmeritradeGrayNickel			        = #F1F1F1			// AmeritradeGrayNickel
-    //  color colorAmeritradeGrayNickelDark20	= #C0C0C0			// AmeritradeGrayNickelDark20
+	//  color colorAmeritradeGrayNickelDark20	= #C0C0C0			// AmeritradeGrayNickelDark20
 color colorAmeritradeGrayAluminum		        = #E6E7E9			// AmeritradeGrayAluminum
 color colorAmeritradeGrayAsh			        = #D8D8D8			// AmeritradeGrayAsh
-    //  color colorAmeritradeGrayStone			= #999999			// AmeritradeGrayStone
-    //  color colorAmeritradeGrayIron			= #666666			// AmeritradeGrayIron
-    //  color colorAmeritradeGrayCharcoal		= #333333			// AmeritradeGrayCharcoal
-    //  color colorAmeritradeBlack				= #000000			// AmeritradeBlack
-    //  color colorAmeritradeGreenCabbage		= #EBF6E9			// AmeritradeGreenCabbage
-    //  color colorAmeritradeGreenVerdeLight70	= #B4D6B2			// AmeritradeGreenVerdeLight70
-    //  color colorAmeritradeGreenVerdeLight50	= #83BC7F			// AmeritradeGreenVerdeLight50
-    //  color colorAmeritradeGreenVerdeNat		= #40a829			// AmeritradeGreenVerdeNat
-    //  color colorAmeritradeGreenVerdeLight20	= #399333			// AmeritradeGreenVerdeLight20
-    //  color colorAmeritradeGreenVerde			= #087900			// AmeritradeGreenVerde
-    //  color colorAmeritradeGreenVerdeDark20	= #066000			// AmeritradeGreenVerdeDark20
+	//  color colorAmeritradeGrayStone			= #999999			// AmeritradeGrayStone
+	//  color colorAmeritradeGrayIron			= #666666			// AmeritradeGrayIron
+	//  color colorAmeritradeGrayCharcoal		= #333333			// AmeritradeGrayCharcoal
+	//  color colorAmeritradeBlack				= #000000			// AmeritradeBlack
+	//  color colorAmeritradeGreenCabbage		= #EBF6E9			// AmeritradeGreenCabbage
+	//  color colorAmeritradeGreenVerdeLight70	= #B4D6B2			// AmeritradeGreenVerdeLight70
+	//  color colorAmeritradeGreenVerdeLight50	= #83BC7F			// AmeritradeGreenVerdeLight50
+	//  color colorAmeritradeGreenVerdeNat		= #40a829			// AmeritradeGreenVerdeNat
+	//  color colorAmeritradeGreenVerdeLight20	= #399333			// AmeritradeGreenVerdeLight20
+	//  color colorAmeritradeGreenVerde			= #087900			// AmeritradeGreenVerde
+	//  color colorAmeritradeGreenVerdeDark20	= #066000			// AmeritradeGreenVerdeDark20
 color colorAmeritradeGreenMoss			        = #BEE7D3			// AmeritradeGreenMoss
-    //  color colorAmeritradeGreenMint			= #6DC4BC			// AmeritradeGreenMint
-    //  color colorAmeritradeGreenPine			= #38635A			// AmeritradeGreenPine
-    //  color colorAmeritradeRedRose			= #FAD1CF			// AmeritradeRedRose
-    //  color colorAmeritradeRedRojaLight50		= #E08988			// AmeritradeRedRojaLight50
-    //  color colorAmeritradeRedRojaLight20		= #CD4241			// AmeritradeRedRojaLight20
-    //  color colorAmeritradeRedRoja			= #C11312			// AmeritradeRedRoja
-    //  color colorAmeritradeRedRojaDark20		= #940F0E			// AmeritradeRedRojaDark20
-    //  color colorAmeritradeorangePeach		= #FCE7CA			// AmeritradeorangePeach
-    //  color colorAmeritradeorangeCarrot		= #ED8902			// AmeritradeorangeCarrot
-    //  color colorAmeritradeorangeYam			= #BD5310			// AmeritradeorangeYam
-    //  color colorAmeritradeblueFrost			= #E1EEF9			// AmeritradeblueFrost
+	//  color colorAmeritradeGreenMint			= #6DC4BC			// AmeritradeGreenMint
+	//  color colorAmeritradeGreenPine			= #38635A			// AmeritradeGreenPine
+	//  color colorAmeritradeRedRose			= #FAD1CF			// AmeritradeRedRose
+	//  color colorAmeritradeRedRojaLight50		= #E08988			// AmeritradeRedRojaLight50
+	//  color colorAmeritradeRedRojaLight20		= #CD4241			// AmeritradeRedRojaLight20
+	//  color colorAmeritradeRedRoja			= #C11312			// AmeritradeRedRoja
+	//  color colorAmeritradeRedRojaDark20		= #940F0E			// AmeritradeRedRojaDark20
+	//  color colorAmeritradeorangePeach		= #FCE7CA			// AmeritradeorangePeach
+	//  color colorAmeritradeorangeCarrot		= #ED8902			// AmeritradeorangeCarrot
+	//  color colorAmeritradeorangeYam			= #BD5310			// AmeritradeorangeYam
+	//  color colorAmeritradeblueFrost			= #E1EEF9			// AmeritradeblueFrost
 color colorAmeritradeblueLagoon			        = #316486			// AmeritradeblueLagoon
-    //  color colorAmeritradeblueNavy			= #2A5673			// AmeritradeblueNavy
-    //  color colorAmeritradeblueNcean			= #64A1C6			// AmeritradeblueNcean
-    //  color colorAmeritradepurpleEggPlant		= #732181			// AmeritradepurpleEggPlant
+	//  color colorAmeritradeblueNavy			= #2A5673			// AmeritradeblueNavy
+	//  color colorAmeritradeblueNcean			= #64A1C6			// AmeritradeblueNcean
+	//  color colorAmeritradepurpleEggPlant		= #732181			// AmeritradepurpleEggPlant
 
 //  ══  Axi  ══
 color colorAxiPrimary					        = #fc404d			// AxiPrimary
@@ -71,12 +71,12 @@ color colorAxiAccent					        = #61ce70			// AxiAccent
 color colorAxi7a46f22					        = #d11c36			// Axi7a46f22
 color colorAxi1519066c					        = #fc404d			// Axi1519066c
 color colorAxi3d4fa1a1					        = #f0ebe3			// Axi3d4fa1a1
-    //  color colorAxi638b46c1					= #fcd758			// Axi638b46c1
-    //  color colorAxid07bac9					= #f9b4a8			// Axid07bac9
+	//  color colorAxi638b46c1					= #fcd758			// Axi638b46c1
+	//  color colorAxid07bac9					= #f9b4a8			// Axid07bac9
 color colorAxie63a114					        = #2c4d5a			// Axie63a114
-    //  color colorAxi8bf0845					= #a4d866			// Axi8bf0845
-    //  color colorAxi75c6da1					= #282424			// Axi75c6da1
-    //  color colorAxi378280f					= #45c2c7			// Axi378280f
+	//  color colorAxi8bf0845					= #a4d866			// Axi8bf0845
+	//  color colorAxi75c6da1					= #282424			// Axi75c6da1
+	//  color colorAxi378280f					= #45c2c7			// Axi378280f
 color colorAxi4de92c5					        = #6caddf			// Axi4de92c5
 color colorAxi413dab8					        = #00275d			// Axi413dab8
 color colorAxib3fab89					        = #55165c			// Axib3fab89
@@ -85,40 +85,40 @@ color colorAxi5ed9920					        = #ea1616			// Axi5ed9920
 color colorAxi70f7335					        = #dd0606			// Axi70f7335
 
 //  ══  GrayScale  ══
-    //  color colorGrayScaleFocus				= #2d7aed			// GrayScaleFocus
-    //  color colorGrayScaleWhite				= #fff				// GrayScaleWhite
-    //  color colorGrayScaleBlack				= #000				// GrayScaleBlack
+	//  color colorGrayScaleFocus				= #2d7aed			// GrayScaleFocus
+	//  color colorGrayScaleWhite				= #fff				// GrayScaleWhite
+	//  color colorGrayScaleBlack				= #000				// GrayScaleBlack
 color colorGrayScalePrimaryBlackberry	        = #2e234b			// GrayScalePrimaryBlackberry
-    //  color colorGrayScalePrimaryBlackberry40	= rgba(46, 35, 75, .4))				// GrayScalePrimaryBlackberry40
-    //  color colorGrayScalePrimaryBlackberry65	= rgba(46, 35, 75, .65))			// GrayScalePrimaryBlackberry65
-    //  color colorGrayScalePrimaryCoral		= #ffb198			// GrayScalePrimaryCoral
+	//  color colorGrayScalePrimaryBlackberry40	= rgba(46, 35, 75, .4))				// GrayScalePrimaryBlackberry40
+	//  color colorGrayScalePrimaryBlackberry65	= rgba(46, 35, 75, .65))			// GrayScalePrimaryBlackberry65
+	//  color colorGrayScalePrimaryCoral		= #ffb198			// GrayScalePrimaryCoral
 color colorGrayScaleSecondaryForestGreen	    = #244024          // GrayScaleSecondaryForestGreen
-    //  color colorGrayScaleSecondaryKeyLime	= #b5ce6f			// GrayScaleSecondaryKeyLime
+	//  color colorGrayScaleSecondaryKeyLime	= #b5ce6f			// GrayScaleSecondaryKeyLime
 color colorGrayScaleSecondaryLavender	        = #c5bfe4			// GrayScaleSecondaryLavender
-    //  color colorGrayScaleSecondaryLavender40	= rgba(197, 191, 228, .4))			// GrayScaleSecondaryLavender40
-    //  color colorGrayScalesecondaryLavender60	= rgba(197, 191, 228, .6))			// GrayScalesecondaryLavender60
-    //  color colorGrayScalehoverWhite			= #c0bdc9			// GrayScalehoverWhite
-    //  color colorGrayScalehoverBlackberry		= #42326b			// GrayScalehoverBlackberry
-    //  color colorGrayScaledisabledBlackberry	= #4d4466			// GrayScaledisabledBlackberry
-    //  color colorGrayScaleactiveBlackberry	= #4d4466			// GrayScaleactiveBlackberry
-    //  color colorGrayScalehoverCcoral			= #ffcdbd			// GrayScalehoverCcoral
-    //  color colorGrayScaleactiveCcoral		= #ff9e80			// GrayScaleactiveCcoral
-    //  color colorGrayScalehoverGray			= #827b93			// GrayScalehoverGray
-    //  color colorGrayScalehoverGray2			= #6d6581			// GrayScalehoverGray2
-    //  color colorGrayScalegrayCharcoal		= #282525			// GrayScalegrayCharcoal
-    //  color colorGrayScalegrayCharcoal70		= rgba(40, 37, 37, .7))				// GrayScalegrayCharcoal70
-    //  color colorGrayScalegrayCharcoal80		= rgba(40, 37, 37, .8))				// GrayScalegrayCharcoal80
-    //  color colorGrayScalegrayLight			= #f5f5f5			// GrayScalegrayLight
-    //  color colorGrayScalegrayMedium			= #eee				// GrayScalegrayMedium
-    //  color colorGrayScalegray70				= #696666			// GrayScalegray70
-    //  color colorGrayScalegrayDark			= #c1c1c1			// GrayScalegrayDark
+	//  color colorGrayScaleSecondaryLavender40	= rgba(197, 191, 228, .4))			// GrayScaleSecondaryLavender40
+	//  color colorGrayScalesecondaryLavender60	= rgba(197, 191, 228, .6))			// GrayScalesecondaryLavender60
+	//  color colorGrayScalehoverWhite			= #c0bdc9			// GrayScalehoverWhite
+	//  color colorGrayScalehoverBlackberry		= #42326b			// GrayScalehoverBlackberry
+	//  color colorGrayScaledisabledBlackberry	= #4d4466			// GrayScaledisabledBlackberry
+	//  color colorGrayScaleactiveBlackberry	= #4d4466			// GrayScaleactiveBlackberry
+	//  color colorGrayScalehoverCcoral			= #ffcdbd			// GrayScalehoverCcoral
+	//  color colorGrayScaleactiveCcoral		= #ff9e80			// GrayScaleactiveCcoral
+	//  color colorGrayScalehoverGray			= #827b93			// GrayScalehoverGray
+	//  color colorGrayScalehoverGray2			= #6d6581			// GrayScalehoverGray2
+	//  color colorGrayScalegrayCharcoal		= #282525			// GrayScalegrayCharcoal
+	//  color colorGrayScalegrayCharcoal70		= rgba(40, 37, 37, .7))				// GrayScalegrayCharcoal70
+	//  color colorGrayScalegrayCharcoal80		= rgba(40, 37, 37, .8))				// GrayScalegrayCharcoal80
+	//  color colorGrayScalegrayLight			= #f5f5f5			// GrayScalegrayLight
+	//  color colorGrayScalegrayMedium			= #eee				// GrayScalegrayMedium
+	//  color colorGrayScalegray70				= #696666			// GrayScalegray70
+	//  color colorGrayScalegrayDark			= #c1c1c1			// GrayScalegrayDark
 color colorGrayScalewebSeasalt			        = #fafafc			// GrayScalewebSeasalt
 color colorGrayScalewebDivider			        = #e9e7f1			// GrayScalewebDivider
 color colorGrayScalewebBackground		        = #f3f2fa			// GrayScalewebBackground
-    //  color colorGrayScalewebSecondaryText	= #77708a			// GrayScalewebSecondaryText
-    //  color colorGrayScalewebStroke			= #d3ceeb			// GrayScalewebStroke
-    //  color colorGrayScalewebErrors			= #e00000			// GrayScalewebErrors
-    //  color colorGrayScalewebService			= #2d7aed			// GrayScalewebService
+	//  color colorGrayScalewebSecondaryText	= #77708a			// GrayScalewebSecondaryText
+	//  color colorGrayScalewebStroke			= #d3ceeb			// GrayScalewebStroke
+	//  color colorGrayScalewebErrors			= #e00000			// GrayScalewebErrors
+	//  color colorGrayScalewebService			= #2d7aed			// GrayScalewebService
 
 //  ══  Interactive  ══
 	//  color colorInteractivePrimary3				= hsla(355, 85%, 46%, 0.03)			// InteractivePrimary3
@@ -175,17 +175,17 @@ color colorGrayScalewebBackground		        = #f3f2fa			// GrayScalewebBackground
 //  ══  Visa  ══
 color colorVisaBrandPrimary				        = #1434CB			// VisaBrandPrimary
 color colorVisaBrandPrimaryLight		        = #3B57DE			// VisaBrandPrimaryLight
-    //  color colorVisaBrandPrimaryDark			= #021E4C			// VisaBrandPrimaryDark
-    //  color colorVisaBrandSecondary			= #FCC015			// VisaBrandSecondary
-    //  color colorVisaBrandSecondaryLight		= #FFD700			// VisaBrandSecondaryLight
-    //  color colorVisaBrandSecondaryDark		= #F7B600			// VisaBrandSecondaryDark
-    //  color colorVisaBrandTertiary7			= #2C2C2C			// VisaBrandTertiary7
-    //  color colorVisaBrandTertiary6			= #5C5C5C			// VisaBrandTertiary6
-    //  color colorVisaBrandTertiary5			= #979797			// VisaBrandTertiary5
-    //  color colorVisaBrandTertiary4			= #B9B9B9			// VisaBrandTertiary4
+	//  color colorVisaBrandPrimaryDark			= #021E4C			// VisaBrandPrimaryDark
+	//  color colorVisaBrandSecondary			= #FCC015			// VisaBrandSecondary
+	//  color colorVisaBrandSecondaryLight		= #FFD700			// VisaBrandSecondaryLight
+	//  color colorVisaBrandSecondaryDark		= #F7B600			// VisaBrandSecondaryDark
+	//  color colorVisaBrandTertiary7			= #2C2C2C			// VisaBrandTertiary7
+	//  color colorVisaBrandTertiary6			= #5C5C5C			// VisaBrandTertiary6
+	//  color colorVisaBrandTertiary5			= #979797			// VisaBrandTertiary5
+	//  color colorVisaBrandTertiary4			= #B9B9B9			// VisaBrandTertiary4
 color colorVisaBrandTertiary3			        = #DEDEDE			// VisaBrandTertiary3
-    //  color colorVisaBrandTertiary2			= #EEEEEE			// VisaBrandTertiary2
-    //  color colorVisaBrandTertiary1			= #F7F7F7			// VisaBrandTertiary1
+	//  color colorVisaBrandTertiary2			= #EEEEEE			// VisaBrandTertiary2
+	//  color colorVisaBrandTertiary1			= #F7F7F7			// VisaBrandTertiary1
 
 //  ══  Latam  ══
 //  colorLatamRedBackground					= rgb(232, 17, 75)			//  Latam Red Background
@@ -196,8 +196,8 @@ color colorArbePrimaryLight				        = #0640FF			// ArbePrimaryLight
 color colorArbeSecondary				        = #04ebff			// ArbeSecondary
 
 //  ══  AutoX  ══
-    //  color colorAutoXPrimary					= #2253F0			// AutoXPrimary
-    //  color colorAutoXPrimaryLight			= #0050F9			// AutoXPrimaryLight
+	//  color colorAutoXPrimary					= #2253F0			// AutoXPrimary
+	//  color colorAutoXPrimaryLight			= #0050F9			// AutoXPrimaryLight
 color colorAutoXSecondary				        = #75ebc0			// AutoXSecondary
 
 //  ══  EEG  ══
@@ -224,12 +224,12 @@ color colorTvLightBlueSky50				        = #12cef8			// TradingViewBlueSky
 //  ══  TFlab  ══
 color colorTFlabAsia					        = #8bbcfc			// Lite TFlabAsia
 color colorTFlabSydney					        = #F0B884			// Lite TFlabSydney
-    //  color colorTFlabTokyo					= #0CC1C0			// Lite TFlabTokyo
-    //  color colorTFlabShanghai				= #FF1010			// Lite TFlabShanghai		#ea1616
-    //  color colorTFlabEuro					= #BBE8B5			// Lite TFlabEuro
-    //  color colorTFlabLondon					= #ACBBE8			// Lite TFlabLondon
-    //  color colorTFlabNewyork					= #C5ACE8			// Lite TFlabNewyork
-    //  color colorTFlabNYSE					= #87c2d4			// Lite TFlabNYSE
+	//  color colorTFlabTokyo					= #0CC1C0			// Lite TFlabTokyo
+	//  color colorTFlabShanghai				= #FF1010			// Lite TFlabShanghai		#ea1616
+	//  color colorTFlabEuro					= #BBE8B5			// Lite TFlabEuro
+	//  color colorTFlabLondon					= #ACBBE8			// Lite TFlabLondon
+	//  color colorTFlabNewyork					= #C5ACE8			// Lite TFlabNewyork
+	//  color colorTFlabNYSE					= #87c2d4			// Lite TFlabNYSE
 
 //  ══  Ultr  ══
 color colorUltrBlueSky10				        = #59F2E9			// UltrBlueSky10
@@ -246,17 +246,44 @@ color colorUltrRedNit					        = #de0011			// UltrRedNit
 
 //////////////////////////////////////////////////////////
 
+
+/// ─── Rsi colors
+colRsiUp			= colorUltrMenta40
+colRsiDn			= colorUltrMenta40
+colRsiMid			= color.new(colorAmeritradeGrayNickel,		70)
+
+/// ─── Rsi Gradient
+colRsiGradUp100		= color.new(colorUltrMenta40,				100)
+colRsiGradUp		= color.new(colorUltrMenta40,				0)
+colRsiGradDn		= color.new(colorAmeritradeGrayNickel,		0)
+colRsiGradDn100		= color.new(colorBrightYellow10,			100)
+
+/// ─── Rsi Ribbon
+colRsiRibbonUp		= color.new(colorUltrMenta40,				75)
+colRsiRibbonDn		= color.new(colorAmeritradeGrayNickel,		75)
+colRsiGround		= color.new(colorArbePrimary,				90)
+
+/// ─── Rsi Bg
+colRsiAreaUp		= color.new(colorUltrMenta40,				90)
+colRsiAreaDn		= color.new(colorAmeritradeGrayNickel,		90)
+
+colRsiCrossHigh		= color.new(colorUltrMenta40,				75)
+colRsiCrossLow		= color.new(colorAmeritradeGrayNickel,		75)
+
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Variables  ═══
 
-var grpValores  = " ═══ Rsi ═══ "
-rsiLength		=	input(defval = 14,  title = "Longitud Rsi")
-middle			=	input(defval = 50,  title = "Media")
-overBoughtHigh	=	input(defval = 75,  title = "Sobrecompra Maximo")
-overBought		=	input(defval = 70,  title = "Sobrecompra")
-overSold		=	input(defval = 30,  title = "Sobreventa")
-overSoldSlow	=	input(defval = 25,  title = "Sobreventa Minimo")
+var grpRsi		= ' ── Rsi ── '
+viewRsi			= input.bool	(defval = true,		title = 'Show Rsi',			group = grpRsi)
+viewBg			= input.bool	(defval = true,		title = 'Show Cross',		group = grpRsi)
+
+rsiLength		=	input		(defval = 14,  title = "Longitud Rsi",			group = grpRsi)
+middle			=	input		(defval = 50,  title = "Media",					group = grpRsi)
+overBoughtHigh	=	input		(defval = 75,  title = "Sobrecompra Maximo",	group = grpRsi)
+overBought		=	input		(defval = 70,  title = "Sobrecompra",			group = grpRsi)
+overSold		=	input		(defval = 30,  title = "Sobreventa",			group = grpRsi)
+overSoldSlow	=	input		(defval = 25,  title = "Sobreventa Minimo",		group = grpRsi)
 
 gradientHigh	=	65
 gradientSlow	=	35
@@ -266,11 +293,11 @@ gradientSlow	=	35
 //  ═══  Types  ═══
 
 type OHL
-    float O = open
-    float H = high
-    float L = low
-    float C = close
-    float V = volume
+	float O = open
+	float H = high
+	float L = low
+	float C = close
+	float V = volume
 
 //  ════════════════
 //  ═══  Simple  ═══
@@ -278,7 +305,7 @@ type OHL
 
 ma(source, length, type) =>
 	switch type
-    	"SMA" => ta.sma(source, length)				// Media Movil Simple
+		"SMA" => ta.sma(source, length)				// Media Movil Simple
 		"EMA" => ta.ema(source, length)				// Media Movil Exponencial
 		"RMA" => ta.rma(source, length)				// Media Movil Rolling
 		"WMA" => ta.wma(source, length)				// Media Movil Ponderada
@@ -294,52 +321,53 @@ rsi = ta.rsi(ohl.C, rsiLength)
 
 //  ═══  Color CrossOver  ═══
 bool signal         = middle < rsi
-color colorCrOver   = signal ? colorTvLightGreen50 : colorAmeritradeGrayNickel
+color colorCrOver   = signal ? colRsiUp : colRsiDn
 
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Lines & Plots  ═══
 
-overBoughtLineHigh  = hline(overBoughtHigh, editable = false,		display = display.none)
-overBoughtLine      = hline(overBought,     editable = false,		display = display.none)
-overSoldLine        = hline(overSold,       editable = false,		display = display.none)
-overSoldLineSlow    = hline(overSoldSlow,   editable = false,		display = display.none)
+overBoughtLineUp	= hline(overBoughtHigh,	editable = false,		display = display.none)
+overBoughtLine		= hline(overBought,		editable = false,		display = display.none)
+overSoldLine		= hline(overSold,		editable = false,		display = display.none)
+overSoldLineDown	= hline(overSoldSlow,	editable = false,		display = display.none)
 
-gradientHighLine    = plot(overBought,		editable = false,		display = display.none)
-rsiMidline			= plot(middle,			color	 = color.new(colorAmeritradeGrayNickel, 70), editable = false)
-gradientSlowLine    = plot(overSold,		editable = false,		display = display.none)
+gradientHighLine	= plot(overBought,		editable = false,		display = display.none)
+rsiMidline			= plot(middle,			editable = false,		color	= colRsiMid)
+gradientSlowLine	= plot(overSold,		editable = false,		display = display.none)
 
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Rsi  ═══
 
-rsiPlotLine			= plot(rsi, title = "RSI", color = color.new(colorCrOver, 40), linewidth= 2)
+rsiPlotLine			= plot(rsi,				title = "RSI",			color = color.new(colorCrOver, 40),		linewidth= 2)
 
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Fills  ═══
 
-//  ═══  Bandas Superior & Inferior  ═══
-fill(overBoughtLine,		overBoughtLineHigh,			color = color.new(colorTvLightGreen50,			88))
-fill(overSoldLine,			overSoldLineSlow,			color = color.new(colorAmeritradeGrayNickel,	88))
+//  ═══  Ribbon Up & Down  ═══
+fill(overBoughtLine,		overBoughtLineUp,			color = colRsiRibbonUp)
+fill(overSoldLine,			overSoldLineDown,			color = colRsiRibbonDn)
 
-//  ═══  Fondo Principal  ═══
-fill(overBoughtLineHigh,	overSoldLineSlow,			color = color.new(colorTvLightGreen50,			90))
+//  ═══  Background  ═══
+fill(overBoughtLine,		overSoldLine,				color = colRsiGround)
 
 //  ═══  Gradient  ═══
-fill(rsiPlotLine,		rsiMidline, 100, 60,  top_color = color.new(colorTvLightGreen50, 0),			bottom_color = color.new(colorTvLightGreen50, 100),		editable = false)
-fill(rsiPlotLine,		rsiMidline, 40,  0,   top_color = color.new(colorAmeritradeGrayNickel, 100),	bottom_color = color.new(colorAmeritradeGrayNickel, 0),	editable = false)
+fill(rsiPlotLine,			rsiMidline, 100, 60,		top_color = colRsiGradUp,			bottom_color = colRsiGradUp100,			editable = false)
+fill(rsiPlotLine,			rsiMidline, 40,  0,			top_color = colRsiGradDn100,		bottom_color = colRsiGradDn,			editable = false)
 
 //  ════════════════
 //  ═══  Simple  ═══
 //  ═══  Strategy  ═══
 
-zoneAbove = rsi > overBought ? 1 : 0
-zoneBelow = rsi < overSold ? 1 : 0
-crossAbove = rsi[1] <  overSold and rsi > overSold ? 1 : 0
+areaAbove = rsi > overBought ? 1 : 0
+areaBelow = rsi < overSold ? 1 : 0
+// crossAbove = rsi[1] <  overSold and rsi > overSold ? 1 : 0
+crossAbove = rsi[1] <  overSold and rsi > overSold + 5 ? 1 : 0
 crossBelow = rsi[1] >  overBought and rsi < overBought ? 1 : 0
 
-bgcolor(zoneAbove	? color.new(colorAmeritradeGrayNickel,	85) : na,	editable = false)
-bgcolor(zoneBelow	? color.new(colorTvLightGreen50,		85) : na)
-bgcolor(crossAbove	? color.new(colorTvLightGreen50,		40) : na)
-bgcolor(crossBelow	? color.new(colorAmeritradeGrayNickel,	40) : na)
+bgcolor(areaAbove	? colRsiAreaDn		: na)
+bgcolor(areaBelow	? colRsiAreaUp		: na)
+bgcolor(crossAbove	? colRsiCrossHigh	: na)
+bgcolor(crossBelow	? colRsiCrossLow	: na)

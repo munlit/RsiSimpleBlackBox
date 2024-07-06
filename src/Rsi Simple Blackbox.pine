@@ -295,14 +295,19 @@ colRsiCrossLow		= color.new(AmeTrGrayNickel,				75)
 
 var grpRsi		= ' ── Rsi ── '
 viewRsi			= input.bool	(defval = true,		title = 'Show Rsi',			group = grpRsi)
+// viewCloud		= input.bool	(defval = false,		title = 'Show Cloud',	group = grpRsi)
 viewBg			= input.bool	(defval = true,		title = 'Show Cross',		group = grpRsi)
 
 rsiLength		=	input		(defval = 14,  title = "Longitud Rsi",			group = grpRsi)
-middle			=	input		(defval = 50,  title = "Media",					group = grpRsi)
+rsiMiddle		=	input		(defval = 50,  title = "Media",					group = grpRsi)
 overBoughtHigh	=	input		(defval = 75,  title = "Sobrecompra Maximo",	group = grpRsi)
 overBought		=	input		(defval = 70,  title = "Sobrecompra",			group = grpRsi)
 overSold		=	input		(defval = 30,  title = "Sobreventa",			group = grpRsi)
 overSoldSlow	=	input		(defval = 25,  title = "Sobreventa Minimo",		group = grpRsi)
+
+// rsiOptionCloud1 = 'RMA'
+// rsiOptionCloud2 = 'EMA'
+// rsiOptionCloudVar =	10
 
 gradientHigh	=	65
 gradientSlow	=	35
@@ -326,11 +331,12 @@ type OHL
 
 ma(source, length, type) =>
 	switch type
-		"SMA" => ta.sma(source, length)				// Media Movil Simple
-		"EMA" => ta.ema(source, length)				// Media Movil Exponencial
-		"RMA" => ta.rma(source, length)				// Media Movil Rolling
-		"WMA" => ta.wma(source, length)				// Media Movil Ponderada
-		"VWMA" => ta.vwma(source, length)			// Media Movil Ponderada por volumen
+		"SMA" => ta.sma(source, length)						// Media Movil Simple
+		"EMA" => ta.ema(source, length)						// Media Movil Exponencial
+		"RMA" => ta.rma(source, length)						// Media Movil Rolling
+		"WMA" => ta.wma(source, length)						// Media Movil Ponderada
+		"VWMA" => ta.vwma(source, length)					// Media Movil Ponderada por volumen
+		"TMA" => ta.sma(ta.sma(source, length), length)		// Media Movil 
 
 ohl = OHL.new()
 
@@ -339,10 +345,31 @@ ohl = OHL.new()
 //  ─── Simple ───
 //  ─── Instances ───
 
-rsi = ta.rsi(ohl.C, rsiLength)
+rsiInsRsi			= ta.rsi(ohl.C, rsiLength)
+
+// //  ─── Cloud ───
+
+// cloudUpper = ta.highest(ohl.C, 10)
+// cloudLower = ta.lowest(ohl.C, 10)
+
+// r = cloudUpper - cloudLower
+
+// mark = ohl.C - ohl.C[1]
+// rsiDiff = cloudUpper > cloudUpper[1] ? r 
+//   : cloudLower < cloudLower[1] ? -r 
+//   : mark
+
+// num = ma(rsiDiff, rsiOptionCloudVar, rsiOptionCloud1)
+// den = ma(math.abs(rsiDiff), rsiOptionCloudVar, rsiOptionCloud1)
+// arsi = num / den * 50 + 50
+
+// rsiSignal = ma(arsi, rsiOptionCloudVar, rsiOptionCloud2)
+
+// rsiInsRma			= ta.rma(ohl.C, rsiOptionCloudVar)
+// rsiInsEma			= ta.ema(ohl.C, rsiOptionCloudVar)
 
 //  ─── Color CrossOver ───
-bool signal         = middle < rsi
+bool signal         = rsiMiddle < rsiInsRsi
 color colorCrOver   = signal ? colRsiUp : colRsiDn
 
 //// ─────────────
@@ -356,7 +383,7 @@ overSoldLine		= hline(viewRsi ? overSold			: na,		editable = false,		display = d
 overSoldLineDown	= hline(viewRsi ? overSoldSlow		: na,		editable = false,		display = display.none)
 
 gradientHighLine	= plot(viewRsi ? overBought			: na,		editable = false,		display = display.none)
-rsiMidline			= plot(viewRsi ? middle				: na,		editable = false,		color	= colRsiMid)
+rsiMidline			= plot(viewRsi ? rsiMiddle			: na,		editable = false,		color	= colRsiMid)
 gradientSlowLine	= plot(viewRsi ? overSold			: na,		editable = false,		display = display.none)
 
 //// ─────────────
@@ -364,7 +391,7 @@ gradientSlowLine	= plot(viewRsi ? overSold			: na,		editable = false,		display =
 //  ─── Simple ───
 //  ─── Rsi ───
 
-rsiPlotLine			= plot(viewRsi ? rsi : na,					title = "RSI",			color = color.new(colorCrOver, 40),		linewidth= 2)
+rsiPlotLine			= plot(viewRsi ? rsiInsRsi : na,					title = "RSI",			color = color.new(colorCrOver, 40),		linewidth= 2)
 
 //// ─────────────
 
@@ -382,16 +409,22 @@ fill(overBoughtLine,		overSoldLine,				color = colRsiGround)
 fill(rsiPlotLine,			rsiMidline,		100, 60,	top_color = colRsiGradUp,			bottom_color = colRsiGradUp100,			editable = false)
 fill(rsiPlotLine,			rsiMidline,		40,  0,		top_color = colRsiGradDn100,		bottom_color = colRsiGradDn,			editable = false)
 
+// //  ─── Cloud ───
+// rsiRmaLine					= plot(viewCloud ? rsiSignal : na,		color = color.new(color.white, 70),	linewidth = 1,			editable = false)
+// rsiEmaLine					= plot(viewCloud ? rsiInsEma : na,		color = color.new(color.white, 70), linewidth = 1,			editable = false)
+
+// fill(rsiRmaLine,			rsiEmaLine,									color = color.new(color.white, 70),			editable = false)
+
 //// ─────────────
 
 //  ─── Simple ───
 //  ─── Strategy ───
 
-areaAbove = rsi > overBought ? 1 : 0
-areaBelow = rsi < overSold ? 1 : 0
-// crossAbove = rsi[1] <  overSold and rsi > overSold ? 1 : 0
-crossAbove = rsi[1] <  overSold and rsi > overSold + 5 ? 1 : 0
-crossBelow = rsi[1] >  overBought and rsi < overBought ? 1 : 0
+areaAbove = rsiInsRsi > overBought ? 1 : 0
+areaBelow = rsiInsRsi < overSold ? 1 : 0
+// crossAbove = rsiInsRsi[1] <  overSold and rsiInsRsi > overSold ? 1 : 0
+crossAbove = rsiInsRsi[1] <  overSold and rsiInsRsi > overSold + 5 ? 1 : 0
+crossBelow = rsiInsRsi[1] >  overBought and rsiInsRsi < overBought ? 1 : 0
 
 bgcolor(viewBg and areaAbove	? colRsiAreaDn		: na)
 bgcolor(viewBg and areaBelow	? colRsiAreaUp		: na)

@@ -86,26 +86,26 @@ AmeTrGrayNickel							= #F1F1F1								// AmeritradeGrayNickel
 
 /// ─── GrayScale ───
 	// GraySFocus								= #2d7aed								// GrayScaleFocus
-	//  GraySWhite								= #fff									// GrayScaleWhite
-	//  GraySBlack								= #000									// GrayScaleBlack
+	// GraySWhite								= #fff									// GrayScaleWhite
+	// GraySBlack								= #000									// GrayScaleBlack
 	// GraySPrimaryBlackberry					= #2e234b								// GrayScalePrimaryBlackberry
-	//  GraySPrimaryBlackberry40				= rgba(46, 35, 75, .4))			    	// GrayScalePrimaryBlackberry40
-	//  GraySPrimaryBlackberry65				= rgba(46, 35, 75, .65))				// GrayScalePrimaryBlackberry65
+	// GraySPrimaryBlackberry40					= rgba(46, 35, 75, .4))			    	// GrayScalePrimaryBlackberry40
+	// GraySPrimaryBlackberry65					= rgba(46, 35, 75, .65))				// GrayScalePrimaryBlackberry65
 	// GraySPrimaryCoral						= #ffb198								// GrayScalePrimaryCoral
 	// GraySSecondaryForestGreen				= #244024								// GrayScaleSecondaryForestGreen
 	// GraySSecondaryKeyLime					= #b5ce6f								// GrayScaleSecondaryKeyLime
 	// GraySSecondaryLavender					= #c5bfe4								// GrayScaleSecondaryLavender
 	// GraySSecondaryLavender40					= rgba(197, 191, 228, .4))				// GrayScaleSecondaryLavender40
-	//  GraySsecondaryLavender60				= rgba(197, 191, 228, .6))				// GrayScalesecondaryLavender60
-	//  GrayShoverWhite							= #c0bdc9								// GrayScalehoverWhite
+	// GraySsecondaryLavender60					= rgba(197, 191, 228, .6))				// GrayScalesecondaryLavender60
+	// GrayShoverWhite							= #c0bdc9								// GrayScalehoverWhite
 	// GrayShoverBlackberry						= #42326b								// GrayScalehoverBlackberry
-	//  GraySdisabledBlackberry					= #4d4466								// GrayScaledisabledBlackberry
-	//  GraySactiveBlackberry					= #4d4466								// GrayScaleactiveBlackberry
-	//  GrayShoverCcoral						= #ffcdbd								// GrayScalehoverCcoral
-	//  GraySactiveCcoral						= #ff9e80								// GrayScaleactiveCcoral
+	// GraySdisabledBlackberry					= #4d4466								// GrayScaledisabledBlackberry
+	// GraySactiveBlackberry					= #4d4466								// GrayScaleactiveBlackberry
+	// GrayShoverCcoral							= #ffcdbd								// GrayScalehoverCcoral
+	// GraySactiveCcoral						= #ff9e80								// GrayScaleactiveCcoral
 	// GrayShoverGray							= #827b93								// GrayScalehoverGray
-	//  GrayShoverGray2							= #6d6581								// GrayScalehoverGray2
-	//  GraySgrayCharcoal						= #282525								// GrayScalegrayCharcoal
+	// GrayShoverGray2							= #6d6581								// GrayScalehoverGray2
+	// GraySgrayCharcoal						= #282525								// GrayScalegrayCharcoal
 	// GraySgrayCharcoal70						= rgba(40, 37, 37, .7))			    	// GrayScalegrayCharcoal70
 	// GraySgrayCharcoal80						= rgba(40, 37, 37, .8))			    	// GrayScalegrayCharcoal80
 	// GraySgrayLight							= #f5f5f5								// GrayScalegrayLight
@@ -295,7 +295,7 @@ colRsiCrossLow		= color.new(AmeTrGrayNickel,				75)
 
 var grpRsi		= ' ── Rsi ── '
 viewRsi			= input.bool	(defval = true,		title = 'Show Rsi',			group = grpRsi)
-// viewCloud		= input.bool	(defval = false,		title = 'Show Cloud',	group = grpRsi)
+viewCloud		= input.bool	(defval = false,	title = 'Show Cloud',		group = grpRsi)
 viewBg			= input.bool	(defval = true,		title = 'Show Cross',		group = grpRsi)
 
 rsiLength		=	input		(defval = 14,  title = "Longitud Rsi",			group = grpRsi)
@@ -347,30 +347,19 @@ ohl = OHL.new()
 
 rsiInsRsi			= ta.rsi(ohl.C, rsiLength)
 
+rsiInsRsi2			= ta.rsi(ohl.C, 8)
+rsiInsRsi3			= ta.rsi(ohl.C, 22)
+
 // //  ─── Cloud ───
 
-// cloudUpper = ta.highest(ohl.C, 10)
-// cloudLower = ta.lowest(ohl.C, 10)
-
-// r = cloudUpper - cloudLower
-
-// mark = ohl.C - ohl.C[1]
-// rsiDiff = cloudUpper > cloudUpper[1] ? r 
-//   : cloudLower < cloudLower[1] ? -r 
-//   : mark
-
-// num = ma(rsiDiff, rsiOptionCloudVar, rsiOptionCloud1)
-// den = ma(math.abs(rsiDiff), rsiOptionCloudVar, rsiOptionCloud1)
-// arsi = num / den * 50 + 50
-
-// rsiSignal = ma(arsi, rsiOptionCloudVar, rsiOptionCloud2)
-
-// rsiInsRma			= ta.rma(ohl.C, rsiOptionCloudVar)
-// rsiInsEma			= ta.ema(ohl.C, rsiOptionCloudVar)
-
 //  ─── Color CrossOver ───
-bool signal         = rsiMiddle < rsiInsRsi
-color colorCrOver   = signal ? colRsiUp : colRsiDn
+bool signal			= rsiMiddle < rsiInsRsi
+color colorCrOver	= signal ? colRsiUp : colRsiDn
+
+cloudCross		= ta.crossover(rsiInsRsi2, 50)
+// bool cloudCross		= rsiInsRsi2 < rsiInsRsi
+color colorCloudCrOver	= cloudCross ? colRsiUp : colRsiDn
+// color colorCloudCrOver	= cloudCross ? colRsiUp : colRsiDn
 
 //// ─────────────
 
@@ -410,10 +399,10 @@ fill(rsiPlotLine,			rsiMidline,		100, 60,	top_color = colRsiGradUp,			bottom_col
 fill(rsiPlotLine,			rsiMidline,		40,  0,		top_color = colRsiGradDn100,		bottom_color = colRsiGradDn,			editable = false)
 
 // //  ─── Cloud ───
-// rsiRmaLine					= plot(viewCloud ? rsiSignal : na,		color = color.new(color.white, 70),	linewidth = 1,			editable = false)
-// rsiEmaLine					= plot(viewCloud ? rsiInsEma : na,		color = color.new(color.white, 70), linewidth = 1,			editable = false)
+rsiRsiLineC1					= plot(viewCloud ? rsiInsRsi2 : na,							display = display.none,					editable = false)
+rsiRsiLineC2					= plot(viewCloud ? rsiInsRsi3 : na,							display = display.none,					editable = false)
 
-// fill(rsiRmaLine,			rsiEmaLine,									color = color.new(color.white, 70),			editable = false)
+fill(rsiRsiLineC1,			rsiRsiLineC2,			color = color.new(colorCloudCrOver, 70),			editable = false)
 
 //// ─────────────
 

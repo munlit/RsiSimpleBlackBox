@@ -351,9 +351,18 @@ ohl = OHL.new()
 rsiInsRsi			= ta.rsi(ohl.C, rsiLength)
 
 /// ─── Haz ───
-rsiInsHazUp			= ta.rsi(ohl.C, 16)
-rsiInsHazDn			= ta.rsi(ohl.C, 12)
+rsiInsHazUp			= ta.rsi(ohl.C, 17)
+rsiInsHazDn			= ta.rsi(ohl.C, 11)
 
+/// ─── Cloud ──
+// 1. Compresion de rango TSI desde -100/100 a -50/50.
+// 2. Al desplazar hacia arriba en 150, por lo que su valor de -50 min se convierte en 100.
+
+rsiInsCloudTSI = 50 + (100 * ta.tsi(ohl.C, 13, 25) / 2)
+rsiInsCloudEMA = ta.ema(rsiInsCloudTSI, 20)
+
+bool colCloudCrossOver			= rsiInsCloudTSI > rsiInsCloudEMA
+color rsiColorCrOver			= colCloudCrossOver ? colRsiUp : colRsiDn
 /// ─── Color CrossOver ───
 bool signal			= rsiMiddleL < rsiInsRsi
 color colorCrOver	= signal ? colRsiUp : colRsiDn
@@ -430,16 +439,7 @@ rsiRsiLineCDn				= plot(checkCloudShow ? rsiInsHazDn : na,							display = displ
 fill(rsiRsiLineCUp,			rsiRsiLineCDn,		color = color.new(colorCloudCrOver, 80),	editable = false)
 
 /// ─── Cloud ───
-// 1. Compresion de rango TSI desde -100/100 a -50/50.
-// 2. Al desplazar hacia arriba en 150, por lo que su valor de -50 min se convierte en 100.
+plotCloudLineTsi	= plot(checkCloudShow ? rsiInsCloudTSI : na, title = "TSI",		color = colRsiCloud,		linewidth = 2,		display = display.none)
+plotCloudLineEma	= plot(checkCloudShow ? rsiInsCloudEMA : na, title = "EMA",		color = colRsiCloud,		linewidth = 2,		display = display.none)
 
-myTSI = 50 + (100 * ta.tsi(ohl.C, 13, 25) / 2)
-myEma = ta.ema(myTSI, 20)
-
-hLineTsi	= plot(myTSI, title = "TSI",		color = colRsiCloud,		linewidth = 2,		display = display.none)
-hLineEma	= plot(myEma, title = "EMA",		color = colRsiCloud,		linewidth = 2,		display = display.none)
-
-bool myCloudCrossOver			= myTSI > myEma
-color mycolorCrOver			= myCloudCrossOver ? colRsiUp : colRsiDn
-
-fill(hLineTsi,			hLineEma,			color = color.new(mycolorCrOver, 50),			editable = false)
+fill(plotCloudLineTsi, plotCloudLineEma,										color = color.new(rsiColorCrOver, 50),			editable = false)
